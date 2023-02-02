@@ -1,0 +1,406 @@
+@font-face {
+  font-family: 'PokerKings';
+  src: url('font/font-monger-poker-kings/PokerKings-Regular.ttf') format('ttf');
+  src: url('font/font-monger-poker-kings/PokerKings-Regular.woff') format('woff');
+  font-style: black;
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'avaneonz';
+  src: url('font/avaneonz-line-font/AvaneonzLine-2Oryv.ttf') format('ttf');
+  src: url('font/avaneonz-line-font/AvaneonzLine-2Oryv.woff') format('woff');
+  font-style: black;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('font/Montserrat/Montserrat-Regular.ttf') format('ttf');
+  src: url('font/Montserrat/Montserrat-Regular.woff') format('woff');
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  background-image:url(img/etoile\ fond.jpg);
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* TITRE avec texte qui clignote */
+h1{
+  font-family: 'avaneonz';
+  color: aliceblue;
+  text-align: center;
+}
+
+.clignote:nth-child(odd) {
+  color:#ffffff;
+  animation: clignote 5s linear infinite;
+}
+
+@keyframes clignote {  
+  50% { opacity: 0; }
+}
+
+.clignote:nth-child(even) {
+  color:#ffffff;
+  animation: clignote 5s linear infinite;
+}
+
+@keyframes clignote {  
+  50% { opacity: 0; }
+}
+
+.titre
+{
+    display: flex; 
+    position: relative;
+    width: 100%;    
+    justify-content: center;
+    align-items: center;
+}
+
+.textmid
+{
+    position: absolute;
+    color: #ffffff;
+    font-size: 5em;
+    text-align: center;
+    text-shadow: 
+    0 0 10px #fff,
+    0 0 11px #fff,
+    0 0 30px #744dff,
+    0 0 50px #744dff,
+    0 0 60px #744dff;
+    transform: translateY(-50%);
+}
+
+/* Carousel  */
+.carousel {
+  padding: 20px;
+  perspective: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel > * {
+  flex: 0 0 auto;
+}
+
+.carousel figure {
+  margin: 0;
+  width: 400px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform-origin: 50% 50% -482.8427124746px;
+}
+
+.carousel figure img {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40px;
+  opacity: 0,9;  
+}
+
+.carousel figure img:not(:first-of-type) {
+  position: absolute; 
+  left: 0;
+  top: 0;
+  transform-origin: 50% 50% -482.8427124746px;
+}
+
+.carousel figure img:nth-child(2) {
+  transform: rotateY(0.7853981634rad);
+}
+
+.carousel figure img:nth-child(3) {
+  transform: rotateY(1.5707963268rad);
+}
+
+.carousel figure img:nth-child(4) {
+  transform: rotateY(2.3561944902rad);
+}
+
+.carousel figure img:nth-child(5) {
+  transform: rotateY(3.1415926536rad);
+}
+
+.carousel figure img:nth-child(6) {
+  transform: rotateY(3.926990817rad);
+}
+
+.carousel figure img:nth-child(7) {
+  transform: rotateY(4.7123889804rad);
+}
+
+.carousel figure img:nth-child(8) {
+  transform: rotateY(5.4977871438rad);
+}
+
+/* BOUTON DU CAROUSEL */
+.carousel nav {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0;
+}
+
+.carousel nav button {
+  flex: 0 0 auto;
+  margin: 0 5px;
+  cursor: pointer;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border-radius: 30px ;
+  border-style: none;
+  background: rgb(255,27,0);
+  background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+}
+
+/* Afficher la carte retourné */
+.image-cliquable{
+  cursor: pointer;
+}
+
+.popup {
+  background-image: url(./img/Carte.png); 
+  background-repeat: no-repeat;
+  top: 48%;
+  left: 49%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  background-size: cover;
+  width: 456px;
+  z-index: 10000;
+  height: 451px;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-visible {
+  display: block;
+}
+
+.popup-invisible {
+  display: none;
+}
+
+.cache-fenetre{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 100px;
+  background-color: #eb3939;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  box-shadow: 4px 4px black;
+  cursor: pointer; 
+}
+
+/* CONTENUE DE LA CARTE RETOURNE */
+.titrecarte{
+  color:#fff;
+  font-family: 'Montserrat';
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-left: 149px;
+  padding-right: 70px;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.explication{
+color: #fff;
+font-family: 'Montserrat';
+align-items: center;
+justify-content: center;
+text-align: justify;
+padding-left: 100px;
+padding-right: 90px;
+font-size: 15px;
+min-height: 115px;
+}
+
+.imagecarteretourne {
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  width: 35%;
+  z-index: 10000;
+  height: 35%;
+  padding-left: 146px;
+  padding-right: 362px;
+
+}
+
+
+/* STYLE DES MENTIONS LEGALES */
+.popup2 {
+  height: fit-content;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  z-index: 200;
+}
+
+.popup2-visible {
+  display: block;
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(88,88,92,0.6895133053221288) 79%, rgba(250,250,250,0) 100%);
+  z-index: 1000;
+}
+
+.popup2-invisible {
+  display: none;
+}
+
+.mentions-legales {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 20px;
+  padding-bottom: 0;
+  font-size: 2.6rem;
+  color: white;
+  text-shadow: 0 0 10px #fff, 0 0 11px #fff, 0 0 30px #15ffff, 0 0 50px #15ffff, 0 0 60px #15ffff;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 200;
+
+} 
+
+/* Texte contenue dans les mentions legales */
+h3{
+  margin: 10;
+  color: white;
+  text-align: center;
+  padding-top: 1%;
+  font-family: 'Montserrat';
+  font-size: 2rem;
+  text-shadow: 0 0 10px #fff, 0 0 11px #fff, 0 0 30px #eb0740, 0 0 50px #eb0740, 0 0 60px #eb0740;
+  transform: translateY(-50%);
+}
+
+h4{
+  color: white;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  margin-bottom: auto;
+  line-height: 22px;
+}
+
+.introML {
+  text-align: center;
+  font-size: 11px;
+  margin: 0;
+  line-height: 26px;
+  margin-bottom: 18px;
+}
+
+.explicationML{
+  width: fit-content;
+  display: inline;
+  max-width: 34%;
+  top: 0%;
+  float: left;
+  margin: 0 76px;
+}
+
+.explicationML a{
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 11px #fff, 0 0 30px #744dff, 0 0 50px #744dff, 0 0 60px #744dff;
+  transform: translateY(-50%);
+  text-decoration: none;
+
+}
+
+.explication p {
+  margin-top: auto;
+  line-height: 18px;
+  text-align: justify;
+}
+
+p {
+  font-family: 'Montserrat';
+  color: white;
+  font-size: 10px;
+}
+
+.finML {
+  text-align: center;
+  margin: auto;
+}
+
+.close {
+  font-family: 'Montserrat';
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 2vw;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+
+/* Formulaire */
+/* la zone de formulaire hérite de la mise en forme de .popup2*/
+h5{
+  margin: 10px;
+  font-family: 'Montserrat';
+  color: #fff;
+}
+
+form{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="submit"]{
+  background-color: #0e7205;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  box-shadow: 4px 4px black;
+  cursor: pointer;
+}
+
+input{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+input:required{
+  border: 2px solid rgb(252, 63, 63);
+}
+
+input:required:valid{
+  border: 2px solid green;
+}
+
+textarea {
+  resize: none;
+} 
+
+.form-visible {
+  display: block;
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(88,88,92,0.6895133053221288) 79%, rgba(250,250,250,0) 100%);
+  z-index: 1000;
+}
+
+.form-invisible {
+  display: none;
+}

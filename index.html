@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr" >
+<head>
+  <meta charset="UTF-8">
+  <title>Mon portrait chinois</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/logo2.png">
+
+</head>
+
+<body>
+	<header>
+		<div class="titre">
+			<h1 class="textmid">Mon <span class="clignote">portrait</span><br>chinois</h1>		
+		</div>
+	</header>
+
+	<main>
+	
+		<div class="carousel">
+			<figure>
+				<img class="image-cliquable" id= "0" src="img/Joker.png"alt="">
+				<img class="image-cliquable" id="1" src="img/Dame.png" alt="">
+				<img class="image-cliquable" id="2" src="img/Valet.png" alt="">
+				<img class="image-cliquable" id="3" src="img/King.png" alt="">
+				<img class="image-cliquable" id="4" src="img/AS.png" alt="">
+				<img class="image-cliquable" id="5" src="img/6.png" alt="">
+				<img class="image-cliquable" id="6" src="img/Joker.png" alt="">
+				<img class="image-cliquable" id="7" src="img/Joker.png" alt="">
+				
+			</figure>
+
+				<nav class = "boutonneon">
+					<button class="nav prev">Précédent</button>
+					<button class="nav next">Suivant</button>
+					<button class="nav add">Crée une catégorie</button>
+				</nav>
+				
+		</div>
+
+		<div class="popup-invisible popup">
+				<div class="description">
+				<!-- cette section est complétée par du code JS, lorsqu'une image
+				du carroussel est cliquée. -->
+				</div>
+				
+				<button type='button' class='cache-fenetre'>Fermer</button>
+		</div>
+
+
+		<!-- Formulaire -->
+		<section class="form-invisible formu popup2" id="Formulaire">
+			<main class="styleform">
+				<form action="" method="post">
+					<h5>Mail</h5>
+					<input type="email" placeholder="Ton mail" id="mail" required>
+					<h5>Si j'étais ...</h5>
+					<input type="text" placeholder="un acteur" id="analogie" required>
+					<h5>Je serais ...</h5>
+					<input type="text" placeholder="Brad Pitt" id="valeurAnalogie" required>
+					<h5>Images</h5>
+					<input type="url" id="imganalogie" name="imganalogie" placeholder="L'url d'une image" required>
+					<h5>Arguments</h5>
+					<textarea class="arg" type="text" placeholder="J'aime sa manière d'être..." id="explication" cols="40"
+						rows="5" spellcheck="true"></textarea>
+					<p class="formbtn">
+						<input type="submit" value="Envoyer et Créer" id="sub" name="sub">
+					</p>
+					<div id="message"></div>
+					<div class="close" id="close-formu">x</div>
+					<p><span>Les données que vous saissez seront directement reporté dans la carte numéro 7</span></p>
+				</form>
+			</main>
+		</section>
+
+
+		<!-- MENTION LEGALE -->
+		<p class="mentions-legales">©</p>
+
+		<footer>
+			<div class="popup2 popup2-invisible">
+				<h3>MENTIONS LÉGALES</h3>
+				<p class="introML">
+					Directeur de la publication, conception graphique et développement : Vincent Gilbert, étudiant à l'Université Gustave Eiffel.
+					<br>
+					Encadrement par Gaëlle Charpentier, Philippe Gambette, Matthieu Berthet
+				</p>
+				<p class="finML"> 
+					©  2022 Gilbert Vincent. Tous droits réservés.
+				</p>
+				<div class="explicationML" id="col1">
+					<h4>POLICES </h4>
+					<p>
+						<a href="https://befonts.com/montserrat-font-family.html">Montserrat</a>
+						<br>
+						<a href="https://befonts.com/avaneonz-font.html">Avaneonz</a>
+					</p>
+					<h4>HÉBERGEMENT</h4>
+					<p>
+						Université Gustave Eiffel <br>
+						2 rue Albert Einstein, 77420 Champs-sur-Marne, France 
+						<br>
+						Téléphone : 01 60 95 75 00
+					</p>
+				</div>
+
+				<div class="explicationML" id="col2">
+					<h4>COLLECTE DES DONNÉES PERSONNELLES</h4>
+					<p>
+						Pour toute question relative à la collecte ou au traitement de vos données personnelles par le site web, vous pouvez contacter le respnsable de la protection des données du projet : philippe.gambette@univ-eiffel.fr.
+
+						<br>
+
+						Les fichiers détenus par l'Université Gustave Eiffel et Philippe Gambette qui comportent des données à caractère personnel ne seront jamais transmis à des tiers et ne feront jamais l'objet d'une commercialisation.
+
+						<br>
+
+						Lors de la création de votre propre analogie, vos informations seront envoyées dans une base de données. Pour les supprimer, veuillez contacter philippe.gambette@univ-eiffel.fr. 
+					</p>
+				</div>
+
+				<div class="explicationML" id="col3">
+					<h4>IMAGES </h4>
+					<p>
+					Images prises sur le site internet <a href ="https://fr.freepik.com/">Freepik</a>
+					</p>
+
+					<h4>ILLUSTRATIONS NEON</h4>
+						<p>
+							Les images aux dos des cartes sont réalisées par Vincent Gilbert.
+					<p>
+						©2023 Tous droits réservés par Vincent Gilbert 
+					</p>
+				<div class="close" id="close-ml">x</div>		
+			</div>
+		</footer>
+
+	</main>
+
+		<script  src="./script.js"></script>
+		<script  src="./data.js"></script>
+</body>
+</html>
